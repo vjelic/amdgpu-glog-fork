@@ -91,6 +91,9 @@
 /* compat_ptr_ioctl() is available */
 #define HAVE_COMPAT_PTR_IOCTL 1
 
+/* need a const argument in member func .is_bin_visible */
+/* #undef HAVE_CONSTANT_ARGUMENT_IN_IS_BIN_VISIBLE */
+
 /* cpuinfo_x86.topo is available */
 #define HAVE_CPUINFO_TOPOLOGY_IN_CPUINFO_X86_STRUCT 1
 
