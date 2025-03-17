@@ -233,6 +233,9 @@
    arg */
 #define HAVE_DRM_CONNECTOR_HELPER_FUNCS_ATOMIC_CHECK_ARG_DRM_ATOMIC_STATE 1
 
+/* .mode_valid need a const drm_display_mode argument */
+/* #undef HAVE_DRM_CONNECTOR_HELPER_FUNCS_MODE_VALID_CONST_ARGUMENT */
+
 /* drm_connector_helper_funcs->prepare_writeback_job is available */
 #define HAVE_DRM_CONNECTOR_HELPER_FUNCS_PREPARE_WRITEBACK_JOB 1
 
