@@ -1086,6 +1086,9 @@
 /* drm_gem_open_object is defined in struct drm_drv */
 /* #undef HAVE_STRUCT_DRM_DRV_GEM_OPEN_OBJECT_CALLBACK */
 
+/* drm_plane_helper_funcs->atomic_async_check() have three arguments */
+/* #undef HAVE_STRUCT_DRM_PLANE_HELPER_FUNCS_ATOMIC_ASYNC_CHECK_THREE_ARGUMENTS */
+
 /* drm_plane_helper_funcs->atomic_check() second param wants drm_atomic_state
    arg */
 #define HAVE_STRUCT_DRM_PLANE_HELPER_FUNCS_ATOMIC_CHECK_DRM_ATOMIC_STATE_PARAMS 1
