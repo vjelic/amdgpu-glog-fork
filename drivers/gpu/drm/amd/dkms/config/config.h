@@ -957,6 +957,9 @@
 /* release_pages() wants 2 args */
 #define HAVE_MM_RELEASE_PAGES_2ARGS 1
 
+/* MODULE_IMPORT_NS() wants a string arguments */
+/* #undef HAVE_MODULE_IMPORT_NS_NEED_A_STRING */
+
 /* class_create has one argument */
 #define HAVE_ONE_ARGUMENT_OF_CLASS_CREATE 1
 
