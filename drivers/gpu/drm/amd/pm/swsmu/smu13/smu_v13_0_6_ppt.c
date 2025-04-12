@@ -117,6 +117,7 @@ enum smu_v13_0_6_caps {
 	SMU_CAP(ACA_SYND),
 	SMU_CAP(SDMA_RESET),
 	SMU_CAP(STATIC_METRICS),
+	SMU_CAP(BOARD_VOLTAGE),
 	SMU_CAP(ALL),
 };
 
@@ -414,8 +415,10 @@ static void smu_v13_0_6_init_caps(struct smu_context *smu)
 			smu_v13_0_6_cap_clear(smu, SMU_CAP(ACA_SYND));
 		if (pgm == 0 && fw_ver >= 0x557900)
 			smu_v13_0_6_cap_set(smu, SMU_CAP(HST_LIMIT_METRICS));
-		if (fw_ver >= 0x00557F01)
+		if (fw_ver >= 0x00557F01) {
 			smu_v13_0_6_cap_set(smu, SMU_CAP(STATIC_METRICS));
+			smu_v13_0_6_cap_set(smu, SMU_CAP(BOARD_VOLTAGE));
+		}
 	}
 	if (((pgm == 7) && (fw_ver >= 0x7550700)) ||
 	    ((pgm == 0) && (fw_ver >= 0x00557900)) ||
