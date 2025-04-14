@@ -52,5 +52,6 @@ struct PPTable_t {
 };
 
 extern void smu_v13_0_6_set_ppt_funcs(struct smu_context *smu);
+int smu_v13_0_6_get_static_metrics_table(struct smu_context *smu);
 
 #endif
