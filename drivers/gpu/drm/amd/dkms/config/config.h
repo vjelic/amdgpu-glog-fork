@@ -662,6 +662,9 @@
 /* Define to 1 if you have the <drm/task_barrier.h> header file. */
 #define HAVE_DRM_TASK_BARRIER_H 1
 
+/* __drm_to_dev is available */
+/* #undef HAVE_DRM_TO_DEV */
+
 /* drm_vblank_crtc_config is available */
 #define HAVE_DRM_VBLANK_CRTC_CONFIG 1
 
