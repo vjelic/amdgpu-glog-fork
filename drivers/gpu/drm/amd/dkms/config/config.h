@@ -459,6 +459,9 @@
 /* drm_dp_update_payload_part1() function has start_slot argument */
 /* #undef HAVE_DRM_DP_UPDATE_PAYLOAD_PART1_START_SLOT_ARG */
 
+/* drm_driver->date is available */
+#define HAVE_DRM_DRIVER_DATE 1
+
 /* drm_driver->gem_prime_mmap() is available */
 /* #undef HAVE_DRM_DRIVER_GEM_PRIME_MMAP */
 
