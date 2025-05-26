@@ -408,11 +408,13 @@ static void smu_v13_0_6_init_caps(struct smu_context *smu)
 			smu_v13_0_6_cap_clear(smu, SMU_CAP(RMA_MSG));
 		if (fw_ver < 0x00555600)
 			smu_v13_0_6_cap_clear(smu, SMU_CAP(ACA_SYND));
-		if (fw_ver >= 0x00557F01) {
+		if ((pgm == 0 && fw_ver >= 0x00557F01) ||
+		    (pgm == 7 && fw_ver >= 0x7551000)) {
 			smu_v13_0_6_cap_set(smu, SMU_CAP(STATIC_METRICS));
 			smu_v13_0_6_cap_set(smu, SMU_CAP(BOARD_VOLTAGE));
 		}
-		if (fw_ver >= 0x00558000)
+		if ((pgm == 0 && fw_ver >= 0x00558000) ||
+		    (pgm == 7 && fw_ver >= 0x7551000))
 			smu_v13_0_6_cap_set(smu, SMU_CAP(PLDM_VERSION));
 	}
 	if (((pgm == 7) && (fw_ver >= 0x7550700)) ||
